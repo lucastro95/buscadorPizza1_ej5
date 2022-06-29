@@ -1,0 +1,130 @@
+// Variables
+$dark-red: #8E3200;
+$light-red: #A64B2A;
+$beige: #D7A86E;
+$light-beige: #FFEBC1;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.navBar {
+    width: 100%;
+    height: 100px;
+    background-color: $light-red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+        height: 90px;
+        margin-left: 2rem;
+    }
+
+    &__form {
+        width: 50%;
+
+        &__input {
+            width: 45%;
+            padding: 0.5rem 2rem;
+            border-radius: 2rem;
+            border: none;
+            background-color: $beige;
+        }
+
+        &__btn {
+            padding: 0.4rem 1rem;
+            border: 2px solid $beige;
+            background-color: $light-beige;
+            color: $dark-red;
+            border-radius: 2rem;
+            margin-left: 0.5rem;
+        }
+
+        &__btn:hover {
+            border: 2px solid $light-beige;
+            background-color: $beige;
+            transition: .5s;
+        }
+    }
+}
+main {
+    height: auto;
+    min-height: calc(100vh - 100px);
+    width: 100%;
+    padding: 2rem;
+    background-color: $light-beige;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.error {
+    visibility: hidden;
+    width: 90%;
+    background-color: $light-red;
+    border: 2px solid $dark-red;
+    color: $light-beige;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    &__card{
+        background-color: $dark-red;
+        width: 15rem;
+        height: 29rem;
+        margin-top: 1rem;
+
+        &__img {
+            width: 15rem;
+            height: 13rem;
+            object-fit: cover;
+            border-radius: 0 0 50% 50%;
+            box-shadow: 0 2rem 2rem 0 #571e00;
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h2 {
+                color: $light-beige;
+                font-weight: 400;
+                margin: 0.8rem 0;
+            }
+
+            h3 {
+                color: $light-beige;
+                font-weight: 300;
+                font-size: 1rem;
+                margin-bottom: 0.8rem;
+            }
+
+            ul {
+                list-style: none;
+                color: $light-beige;
+            }
+
+            p {
+                text-align: center;
+                margin-top: 1rem;
+                font-size: 1.3rem;
+                color: $light-beige;
+                font-weight: 600
+            }
+        }
+    }
+}
